@@ -21,7 +21,8 @@ Enter the stock ticker symbol, select the date range, and adjust the ARIMA param
 # Step 1: User inputs for stock ticker and date range
 ticker = st.text_input("Enter Stock Ticker Symbol (e.g., AAPL, MSFT, TSLA)", value='TSLA')
 start_date = st.date_input("Start Date", value=pd.to_datetime('2020-11-01'))
-end_date = st.date_input("End Date", value=pd.to_datetime('2024-11-12'))
+end_date = st.date_input("End Date", value=today) 
+#end_date = st.date_input("End Date", value=pd.to_datetime('2024-11-12'))
 forecast_days = st.slider("Select Forecast Days", min_value=1, max_value=90, value=30)
 
 # Step 2: Fetch stock data using yfinance
