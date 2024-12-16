@@ -23,7 +23,7 @@ ticker = st.text_input("Enter Stock Ticker Symbol (e.g., AAPL, MSFT, TSLA)", val
 start_date = st.date_input("Start Date", value=pd.to_datetime('2020-11-01'))
  
 end_date = st.date_input("End Date", value=pd.to_datetime('2024-12-16'))
-forecast_days = st.slider("Select Forecast Days", min_value=1, max_value=90, value=30)
+forecast_days = st.slider("Select Forecast Days", min_value=1, max_value=180, value=30)
 
 # Step 2: Fetch stock data using yfinance
 @st.cache_data
